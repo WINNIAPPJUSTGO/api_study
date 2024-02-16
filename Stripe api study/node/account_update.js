@@ -5,6 +5,7 @@ const stripe = require("stripe")(
 const testFunction = async () => {
   const account = await stripe.accounts.update("acct_1OgEeTPKR8pAtt9x", {
     individual: {
+      
       address: {
         city: "Winnipeg",
         line1: "ABC Address line 1",
