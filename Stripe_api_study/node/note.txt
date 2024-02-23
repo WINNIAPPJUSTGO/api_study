@@ -1,0 +1,6 @@
+// 首先创建账户create account并运行获得account Id
+// 然后将这个account id 加入到account update中
+// 创建bank account test，并将account id 加入，运行上传银行信息
+// 上传verification document back and front
+// 运行list_all_files查看图片文件是否上传成功
+// 调用account_update更新

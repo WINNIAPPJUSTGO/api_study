@@ -18,6 +18,29 @@ const testFunction = async () => {
         requested: true,
       },
     },
+    individual: {
+      
+      address: {
+        city: "Winnipeg",
+        line1: "ABC Address line 1",
+        postal_code : "R3E 5S6",
+        state: "Manitoba",
+      },
+      dob:{
+        day:23,
+        month:9,
+        year:1995,
+      },
+      first_name: "John",
+      last_name: "Lee",
+    },
+    tos_acceptance:{
+      date: Math.floor(1707090696267 / 1000),
+      ip: "0.0.0.0"
+  }
+
+
+
   });
 
   
