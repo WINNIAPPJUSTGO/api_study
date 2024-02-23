@@ -4,3 +4,4 @@
 // 上传verification document back and front
 // 运行list_all_files查看图片文件是否上传成功
 // 调用account_update更新
+// 运行retrieve_account检索用户是否创建成功和更新成功
