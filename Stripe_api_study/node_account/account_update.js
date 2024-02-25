@@ -39,7 +39,13 @@ const testFunction = async () => {
         date: Math.floor(1707090696267 / 1000),
         ip: "0.0.0.0"
     },
-    external_account:"cards",
+    external_account:{
+      account_number:"000000000009",
+      country:"CA",
+      currency:"CAD",
+      object:"bank_account",
+      routing_number:11000000
+    }
 
   }
   );

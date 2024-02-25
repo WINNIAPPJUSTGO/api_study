@@ -7,8 +7,12 @@ const testFunction = async () => {
   (
       'acct_1OgEeTPKR8pAtt9x',
       {
-        external_account:{ 
-          date
+        external_account:{
+          account_number:"000000000009",
+          country:"CA",
+          currency:"CAD",
+          object:"bank_account",
+          routing_number:11000000
         }
       }
   );
