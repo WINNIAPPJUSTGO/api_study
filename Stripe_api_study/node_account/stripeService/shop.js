@@ -54,7 +54,7 @@ const createAccount = async (params) => {
     external_account: {
       object: "bank_account",
       country: "CA", // 加拿大
-      currency: "cad", // 加拿大元
+      currency: "CAD", // 加拿大元
       routing_number: bank_routing_number, // 加拿大银行路由号码
       account_number: bank_account_number, // 银行账户号码
     },
@@ -117,6 +117,6 @@ createAccount({
   },
   first_name: "Zhaoping",
   last_name: "Luo",
-  bank_routing_number: "11000-000",
+  bank_routing_number: "11000000",
   bank_account_number: "000123456789",
 })
