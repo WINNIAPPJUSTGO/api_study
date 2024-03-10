@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stripe Payment Example</title>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <form id="payment-form">
+      <div id="card-element">
+        <!-- Stripe's Card Element will be inserted here -->
+      </div>
+      <input type="text" id="postal-code" placeholder="Postal Code" pattern="[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d">
+
+      <button type="submit">Pay</button>
+    </form>
+
+    <script>
+      // Initialize Stripe with your publishable key
+      var stripe = Stripe("pk_test_51K10IEABJaSnqIjxv667EUv37jIzTxw9cRQ8MotQnMDqJrRlPBnfJ7xBHA9qa8ZvW0KgmkfApEOAEWeZDJqz2QVt00co1AH992");
+
+      // Create an instance of Elements with locale set to Canadian English
+      var elements = stripe.elements({
+        locale: "en-CA",
+      });
+
+      // Create an instance of the Card Element and mount it to the DOM
+      var card = elements.create("card");
+      card.mount("#card-element");
+
+      // Handle form submission
+      var form = document.getElementById("payment-form");
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        // Create a payment method using the card information
+        const { paymentMethod, error } = await stripe.createPaymentMethod({
+          type: "card",
+          card: card,
+          billing_details: {
+            address: {
+              postal_code: document.getElementById("postal-code").value,
+            },
+          },
+        });
+
+        if (error) {
+          // Handle any errors from Stripe.js
+          console.log(error.message);
+        } else {
+          // Send the paymentMethod.id to your server to create a charge or a PaymentIntent
+          console.log("Payment method created:", paymentMethod.id);
+        }
+      });
+    </script>
+  </body>
+</html>
