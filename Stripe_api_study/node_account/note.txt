@@ -2,7 +2,8 @@
 // 然后将这个account id 加入到account update中
 // 运行bank account test，并将account id 加入，运行上传银行信息
 // 或使用真实key运行create a card，并将account id 加入，运行上传银行信息
-//
+// 运行PaymentIntent，"PaymentIntent 是一个对象，用于表示一次支付交易的意图和状态。PaymentIntent 
+   主要用于处理支付过程中的各种状态和行为，包括验证支付、确认支付、取消支付等操作。"
 // 上传verification document back and front
 // 运行list_all_files查看图片文件是否上传成功
 // 调用account_update更新

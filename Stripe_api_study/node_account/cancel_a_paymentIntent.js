@@ -4,14 +4,9 @@ const stripe = require('stripe')(
   
   const testFunction = async () => {
     
-    const paymentIntent = await stripe.paymentIntents.create({
-        amount: 2000,
-        currency: 'usd',
-        automatic_payment_methods: {
-            enabled: true,
-    },
-    });
-    
+    const paymentIntent = await stripe.paymentIntents.cancel(
+        'pi_3OnX4sABJaSnqIjx1VAD4qSu'
+      );
       console.log(paymentIntent);
   };
   

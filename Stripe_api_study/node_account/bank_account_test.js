@@ -12,7 +12,7 @@ const testFunction = async () => {
           country:"CA",
           currency:"CAD",
           object:"bank_account",
-          routing_number:11000000
+          routing_number:110000000
         }
       }
   );
