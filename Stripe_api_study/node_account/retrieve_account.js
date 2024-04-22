@@ -3,7 +3,7 @@ const stripe = require("stripe")(
   );
   
   const testFunction = async () => {
-    const account = await stripe.accounts.retrieve('acct_1OgEeTPKR8pAtt9x');
+    const account = await stripe.accounts.retrieve('acct_1P6wrvPLHGWdUBw8');
   
     console.log(account);
   

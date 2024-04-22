@@ -1,0 +1,2 @@
+//首先现在cmd 中安装@easypost/api模块 ，命令是：npm install @easypost/api
+//检查版本信息，更新到10.5.0   命令：npm install -g npm@10.5.0

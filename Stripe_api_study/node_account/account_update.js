@@ -4,37 +4,44 @@ const stripe = require("stripe")(
 
 const testFunction = async () => {
   const account = await stripe.accounts.update
-  ("acct_1OgEeTPKR8pAtt9x", 
+  ("acct_1P6wrvPLHGWdUBw8", 
   {
     individual: {
       verification:
       {
+        //verification document ID
         document: {
-          back: 'file_1Om6lbABJaSnqIjxtPGcSd9R',
-          front:'file_1Om6lkABJaSnqIjxRWCThlZx'
+          back: 'file_identity_document_success',
+          
+        },
+        //verification document liveness 
+        additional_document:{
+          back:'file_identity_document_success',
+          
         }
       },
+      id_number:"000000000",	
+      id_number_secondary:"000000000",
       address: 
       {
         city: "Winnipeg",
-        line1: "ABC Address line 1",
+        line1: "address_full_match",
         postal_code : "R3E 5S6",
         state: "Manitoba",
       },
 
       dob:
       {
-        day:23,
-        month:9,
-        year:1995,
+        day:1,
+        month:1,
+        year:1901,
       },
 
-      first_name: "John",
-      last_name: "Lee",
-
+      first_name: "n",
+      last_name: "K",
       
     },
-
+    
     tos_acceptance:{
         date: Math.floor(1707090696267 / 1000),
         ip: "0.0.0.0"
@@ -45,8 +52,11 @@ const testFunction = async () => {
       currency:"CAD",
       object:"bank_account",
       routing_number:11000000
+    },
+    business_profile:{
+      product_description:"This is a product description.",
+      url:"https://accessible.stripe.com",
     }
-
   }
   );
 

@@ -5,7 +5,7 @@ const testFunction = async () => {
   const account = await stripe.accounts.create({
     type: 'custom',
     country: 'CA',
-    email: 'jenny.rosen@example.com',
+    email: '1234@qq.com',
 
     business_type: 'individual',
     
@@ -19,21 +19,28 @@ const testFunction = async () => {
       },
     },
     individual: {
-      first_name: "John",
+      first_name: "Amy",
       last_name: "Lee",
  
       dob:{
-        day:23,
-        month:9,
-        year:1995,
+        day:1,
+        month:1,
+        year:1901,
       },
 
       address: {
         city: "Winnipeg",
-        line1: "ABC Address line 1",
+        line1: "address_full_match",
         postal_code : "R3E 5S6",
         state: "Manitoba",
       },
+
+      email:"amy.lee@gmail.com",
+      phone:"5489896152",
+      relationship:{
+        owner:true,
+        title:"CEO",
+      }
     },
     tos_acceptance:{
       date: Math.floor(1707090696267 / 1000),

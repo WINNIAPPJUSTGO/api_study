@@ -5,14 +5,14 @@ const stripe = require('stripe')(
 const testFunction = async () => {
   const externalAccount = await stripe.accounts.createExternalAccount
   (
-      'acct_1OgEeTPKR8pAtt9x',
+      'acct_1P1ex9PE7tx35zHG',
       {
         external_account:{
           account_number:"000000000009",
           country:"CA",
           currency:"CAD",
           object:"bank_account",
-          routing_number:110000000
+          routing_number:11000000
         }
       }
   );
